@@ -14,7 +14,7 @@ if (cwd != 'foo'):
     exit()
 
 blah_dir = os.getcwd() + os.sep + "bar/blah"
-for dir_path, dirnames, files in os.walk(borg_dir):
+for dir_path, dirnames, files in os.walk(blah_dir):
     for file in  fnmatch.filter(files, 'foo.txt'):
         full_file_path = os.path.join(dir_path, file)
         call(["ls", full_file_path)
